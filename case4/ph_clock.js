@@ -11,11 +11,6 @@
 
 */
 
-
-
-
-
-
 /* ------------------------------------------------- */
 
 
@@ -23,6 +18,13 @@
    ticket order. If the time left is 0, the stopClock() function is run;
    otherwise nothing happens and the program continues to run. */
    
+   var minsLeft = 0 ; // track the number of secs left within each minute
+   var timeLeft =15 ; 
+
+   function countdown(){
+      var secsLeft = (timeLeft - Math.floor(minsLeft))*60; 
+   }
+
 function checkTimer() {
    if (timeLeft === 0) stopClock();
 }
@@ -33,4 +35,7 @@ function checkTimer() {
 function addLeadingZero(num) {
    var numStr = (num < 10) ? ("0" + num) : "" + num;
    return numStr;
+   var minsString = addLeadingZero; 
+   return addLeadingZero();
 }
+function addLeadingZero
